@@ -59,6 +59,9 @@
 
     <section>
       <h2>On-Device Data Usage</h2>
+      <p>
+        Unbotherd stores a limited amount of data <strong>locally on your device only</strong> in order to function.
+      </p>
 
       <h3>App Groups</h3>
       <ul>
@@ -75,24 +78,30 @@
         <li>App package name</li>
       </ul>
 
-      <p>
-        This data never leaves your device, is not backed up to the cloud, and
-        is deleted when you uninstall the app.
-      </p>
+      <p>This data:</p>
+      <ul>
+        <li>Never leaves your device</li>
+        <li>Is not backed up to the cloud</li>
+        <li>Is deleted when you uninstall the app</li>
+      </ul>
     </section>
 
     <section>
       <h2>Permissions Explanation</h2>
+      <p>
+        Unbotherd requests the following Android permissions <strong>only to provide user-facing functionality</strong>:
+      </p>
 
       <h3>Accessibility Service</h3>
       <p>
         <strong>Purpose:</strong> Used to detect when a locked app is opened so
         Unbotherd can block or redirect access.
       </p>
+      <p><strong>Important Notes:</strong></p>
       <ul>
-        <li>Does not read keystrokes</li>
-        <li>Does not monitor typing</li>
-        <li>Does not capture screen content</li>
+        <li>Unbotherd does <strong>not</strong> read keystrokes</li>
+        <li>Unbotherd does <strong>not</strong> monitor typing</li>
+        <li>Unbotherd does <strong>not</strong> capture screen content</li>
       </ul>
       <p>
         This permission can be disabled at any time in Android system settings.
@@ -103,6 +112,7 @@
         <strong>Purpose:</strong> Used to intercept and temporarily hold
         notifications from apps you choose while they are locked.
       </p>
+      <p><strong>Important Notes:</strong></p>
       <ul>
         <li>Notifications are stored locally only</li>
         <li>Notifications are not shared or transmitted</li>
@@ -111,6 +121,79 @@
       <p>
         This permission can be disabled at any time in Android system settings.
       </p>
+
+      <h3>Display Over Other Apps (SYSTEM_ALERT_WINDOW)</h3>
+      <p>
+        <strong>Purpose:</strong> Used to display the lock screen overlay when you try to open a locked app.
+      </p>
+      <p><strong>Important Notes:</strong></p>
+      <ul>
+        <li>Only displays when you attempt to open a locked app</li>
+        <li>Does not monitor or record screen content</li>
+        <li>Can be disabled in Android system settings</li>
+      </ul>
+
+      <h3>Query Installed Apps (QUERY_ALL_PACKAGES)</h3>
+      <p>
+        <strong>Purpose:</strong> Used to display the list of installed apps so you can choose which apps to add to groups.
+      </p>
+      <p><strong>Important Notes:</strong></p>
+      <ul>
+        <li>App list is only used locally for the app picker UI</li>
+        <li>App information is not transmitted or shared</li>
+        <li>Required on Android 11+ due to package visibility restrictions</li>
+      </ul>
+
+      <h3>Schedule Exact Alarms (SCHEDULE_EXACT_ALARM)</h3>
+      <p>
+        <strong>Purpose:</strong> Used to automatically lock and unlock app groups at scheduled times.
+      </p>
+      <p><strong>Important Notes:</strong></p>
+      <ul>
+        <li>Only schedules alarms for lock/unlock events you configure</li>
+        <li>No data is transmitted; alarms run entirely on-device</li>
+      </ul>
+
+      <h3>Boot Completed (RECEIVE_BOOT_COMPLETED)</h3>
+      <p>
+        <strong>Purpose:</strong> Used to restore your lock schedules after your device restarts.
+      </p>
+      <p><strong>Important Notes:</strong></p>
+      <ul>
+        <li>Only reschedules alarms you have previously configured</li>
+        <li>App does not start automatically in the foreground</li>
+      </ul>
+
+      <h3>Post Notifications (POST_NOTIFICATIONS)</h3>
+      <p>
+        <strong>Purpose:</strong> Used to re-post held notifications when a group is unlocked (Android 13+).
+      </p>
+      <p><strong>Important Notes:</strong></p>
+      <ul>
+        <li>Only posts notifications that were previously held from locked apps</li>
+        <li>You control when notifications are released by unlocking groups</li>
+      </ul>
+
+      <h3>Internet (INTERNET)</h3>
+      <p>
+        <strong>Purpose:</strong> Used to load advertisements in the free version of the app.
+      </p>
+      <p><strong>Important Notes:</strong></p>
+      <ul>
+        <li>No user data is transmitted to developer servers</li>
+        <li>Ad-related network traffic is handled by Google AdMob</li>
+        <li>Pro users do not use this permission (no ads)</li>
+      </ul>
+
+      <h3>Background Processes (KILL_BACKGROUND_PROCESSES)</h3>
+      <p>
+        <strong>Purpose:</strong> Used to remove locked apps from the recent apps list when blocked.
+      </p>
+      <p><strong>Important Notes:</strong></p>
+      <ul>
+        <li>Only affects apps you have locked</li>
+        <li>Prevents bypassing the lock screen via task switcher</li>
+      </ul>
     </section>
 
     <section>
@@ -160,13 +243,14 @@
         <li>The developer</li>
       </ul>
       <p>
-        Unbotherd does not operate backend servers and does not transmit user
+        Unbotherd does not operate its own backend servers and does not transmit user
         data off the device.
       </p>
     </section>
 
     <section>
       <h2>User Control</h2>
+      <p>You have full control over Unbotherd at all times:</p>
       <ul>
         <li>Enable or disable app locking</li>
         <li>Enable or disable notification holding</li>
@@ -187,14 +271,18 @@
     <section>
       <h2>Changes to This Policy</h2>
       <p>
-        This Privacy Policy may be updated as the app evolves. The updated policy
-        will be published at this URL. Continued use of the app indicates
-        acceptance of the updated policy.
+        This Privacy Policy may be updated as the app evolves.
       </p>
+      <p>If changes are made:</p>
+      <ul>
+        <li>The updated policy will be published at this URL</li>
+        <li>Continued use of the app indicates acceptance of the updated policy</li>
+      </ul>
     </section>
 
     <section>
       <h2>Contact</h2>
+      <p>If you have questions about this Privacy Policy:</p>
       <ul>
         <li>Website: <a href="https://unbotherd.app">https://unbotherd.app</a></li>
         <li>Email: <a href="mailto:support@unbotherd.app">support@unbotherd.app</a></li>

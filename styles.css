@@ -50,8 +50,19 @@ a:hover {
 
 .hero .tagline {
   margin-top: 1rem;
-  font-size: 1.25rem;
-  opacity: 0.95;
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 1;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+}
+
+.hero .description {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
